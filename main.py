@@ -11,10 +11,12 @@ length = len(password)
 
 score = 0
 
-with open('common.txt','r') as f:
-    common = f.read().splitlines()
+with open('common.txt', 'r') as f:
+    # Normalizamos las contraseñas a minúsculas al cargarlas
+    common = [line.lower() for line in f.read().splitlines()]
 
-if password in common:
+# Comparamos la contraseña en minúsculas con las contraseñas comunes
+if password.lower() in common:
     print("Tu contraseña es común. Score: 0/10")
     exit()
 
