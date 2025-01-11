@@ -1,7 +1,7 @@
 import string
 import getpass
 
-password = getpass.getpass("Introduce tu contraseña: ")
+password = getpass.getpass("Introduce tu contraseña:")
 
 upper_case = any([1 if c in string.ascii_uppercase else 0 for c in password]) 
 lower_case = any([1 if c in string.ascii_lowercase else 0 for c in password]) 
